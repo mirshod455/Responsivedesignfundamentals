@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+	color: #333;
+	font-size: 16px;
+	font-weight: normal;
+
+	background-color: #f3eae3;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: normal;
+}
+
+.container {
+	width: 100%;
+	max-width: 600px;
+	height: 100vh;
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	width: 600px;
+	height: 450px;
+	overflow: hidden;
+	border-radius: 10px;
+	background: #ffffff;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card__left {
+	width: 50%;
+	height: 100%;
+}
+
+.card__image {
+	width: 100%;
+	height: 100%;
+}
+
+.card__right {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	padding: 0 32px;
+}
+
+.product__category {
+	margin-top: 35px;
+
+	font-size: 14px;
+	color: #77777f;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 5px;
+	line-height: normal;
+}
+
+.product__title {
+	margin-top: 20px;
+
+	font-family: Fraunces, serif;
+	font-size: 32px;
+	font-weight: 700;
+	color: #1b222a;
+}
+
+.product__description {
+	margin-top: 15px;
+	font-size: 14px;
+	color: #64646e;
+	line-height: 28px;
+}
+
+.product__price {
+	margin: 20px 0;
+
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.product__price--current {
+	font-size: 24px;
+	font-weight: bold;
+	color: #3c8268;
+}
+
+.product__price--previous {
+	font-size: 14px;
+	font-weight: normal;
+	color: #64646e;
+	text-decoration: line-through;
+}
+
+.cart__button {
+	width: 100%;
+	height: 50px;
+	background-color: #3c8268;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	transition: background-color 0.3s ease-in-out;
+}
+
+.cart__button:hover {
+	background-color: #1a4031;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		height: auto;
+		padding: 82px 12px 0 12px;
+	}
+
+	.card {
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+	}
+
+	.card__left,
+	.card__right {
+		width: 100%;
+		height: auto;
+	}
+
+	.card__right {
+		padding-left: 33px;
+	}
+
+	.card__image {
+		height: 342px;
+		object-fit: cover;
+	}
+
+	.product__category,
+	.product__title,
+	.product__description,
+	.product__price {
+		margin-top: 20px;
+	}
+
+	.cart__button {
+		margin: 25px 0 32px 0;
+	}
+}
